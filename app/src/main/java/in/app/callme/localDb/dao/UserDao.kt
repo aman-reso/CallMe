@@ -14,4 +14,5 @@ interface UserDao {
 
     @Query("select *from user_table")
     fun getAllQuery(): Flow<List<UserContacts>>
+
 }

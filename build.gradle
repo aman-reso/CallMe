@@ -12,8 +12,8 @@ buildscript {
     ext.hilt_version = '2.38.1'
     ext.compose_version = '1.0.0-beta09'
     repositories {
+        jcenter()
         google()
-        mavenCentral()
     }
 
     dependencies {
@@ -25,7 +25,13 @@ buildscript {
 }
 allprojects {
     repositories {
-//        mavenCentral()
-//        google()
+        google()
+        mavenLocal()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven {
+            url "https://maven.google.com"
+        }
     }
 }
+

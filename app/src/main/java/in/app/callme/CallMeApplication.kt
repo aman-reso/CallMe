@@ -13,10 +13,20 @@ import java.util.concurrent.Executor
 
 @HiltAndroidApp
 class CallMeApplication : Application() {
+    companion object {
+        var INSTANCE: CallMeApplication? = null
+        fun getApplicationContext(): CallMeApplication? {
+            return INSTANCE
+        }
+    }
+
     override fun onCreate() {
         super.onCreate()
-
+        if (INSTANCE == null) {
+            INSTANCE = applicationContext as CallMeApplication?
+        }
     }
+
 
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
@@ -143,13 +153,15 @@ class CallMeApplication : Application() {
         modeFlags: Int,
         message: String?
     ) {
-        super.enforceUriPermission(uri,
+        super.enforceUriPermission(
+            uri,
             readPermission,
             writePermission,
             pid,
             uid,
             modeFlags,
-            message)
+            message
+        )
     }
 
     override fun grantUriPermission(toPackage: String?, uri: Uri?, modeFlags: Int) {
