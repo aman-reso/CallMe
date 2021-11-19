@@ -8,10 +8,9 @@ import javax.inject.Singleton
 
 @Singleton
 class ContactListRepository @Inject constructor(var userDao: UserDao) {
-    fun getAllContacts() = userDao.getAllQuery()
+    fun getAllContacts() = userDao.getAllDistinctContactsFromDB()
 
-
-    fun insertUserContactsIntoDb(userContacts: UserContacts) {
+  suspend  fun insertUserContactsIntoDb(userContacts: List<UserContacts>) {
         userDao.insertValue(user = userContacts)
     }
 

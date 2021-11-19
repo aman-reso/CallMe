@@ -12,7 +12,7 @@ import javax.inject.Inject
 @HiltViewModel
 class HomeFragViewModel @Inject constructor(var repository: HomeFragRepository) : ViewModel() {
 
-    fun get() = viewModelScope.launch(Dispatchers.IO) {
+    fun get() = viewModelScope.launch {
         val response = repository.getResponse()
         when(response)
         {

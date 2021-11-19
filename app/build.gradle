@@ -96,6 +96,10 @@ dependencies {
 
     implementation "dev.chrisbanes.accompanist:accompanist-coil:0.6.1"
     implementation "com.airbnb.android:lottie:$lottieVersion"
-    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+   // implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+    //implementation 'com.github.numetriclabz:numandroidcharts:'
+
+    implementation("app.futured.donut:donut:2.2.0")
 
 }

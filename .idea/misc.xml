@@ -8,12 +8,17 @@
         <entry key="../../../layout/compose-model-1635791657789.xml" value="0.15" />
         <entry key="../../../layout/compose-model-1635823862070.xml" value="0.2934966216216216" />
         <entry key="../../../layout/compose-model-1635824630431.xml" value="2.0" />
+        <entry key="../../../layout/compose-model-1636476984937.xml" value="0.2934966216216216" />
+        <entry key="app/src/main/res/drawable/circular_view.xml" value="0.336" />
         <entry key="app/src/main/res/drawable/rainbow_shape_.xml" value="0.312" />
+        <entry key="app/src/main/res/drawable/white_rectangular_corner8.xml" value="0.336" />
         <entry key="app/src/main/res/layout/activity_billing_form.xml" value="0.250390625" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/analysis_no_of_call_section.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_contacts.xml" value="0.3338541666666667" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.3338541666666667" />
         <entry key="app/src/main/res/layout/fragment_user_analysis.xml" value="0.3333333333333333" />
+        <entry key="app/src/main/res/layout/pie_chart_discription.xml" value="0.33" />
         <entry key="app/src/main/res/layout/recent_calls_each_itemview.xml" value="0.3338541666666667" />
         <entry key="app/src/main/res/layout/saved_contacts_itemview.xml" value="0.159375" />
         <entry key="app/src/main/res/layout/saved_contacts_single_alphabet_strip.xml" value="0.3333333333333333" />

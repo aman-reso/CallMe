@@ -9,11 +9,12 @@ import java.util.*
 @Entity(tableName = "user_table")
 data class UserContacts(
     @PrimaryKey(autoGenerate = true)
-    val uid: Int,
-    @ColumnInfo(name = "contact_name") val fullName: String?,
+    val uid: Int = 0,
+
+    @ColumnInfo(name = "contact_name") val fullName: String? = null,
     @ColumnInfo(name = "country_code") val countryCode: String? = "+91",
     @NotNull
-    @ColumnInfo(name = "mobile_number") val mobileNumber: String?,
+    @ColumnInfo(name = "mobile_number") val mobileNumber: String,
     @ColumnInfo(name = "email_id") val emailId: String? = null,
     @ColumnInfo(name = "address_line") val addressLine: String? = null,
     @ColumnInfo(name = "pincode") val pincode: String? = null,
@@ -22,5 +23,6 @@ data class UserContacts(
     @ColumnInfo(name = "instagramId") val instagram: String? = null,
     @ColumnInfo(name = "facebookId") val faceBookId: String? = null,
     @ColumnInfo(name = "twitter") val twitter: String? = null,
-    @ColumnInfo(name = "orgName") val orgName: String? = null, )
+    @ColumnInfo(name = "orgName") val orgName: String? = null,
+)
 

@@ -10,5 +10,6 @@ class SavedContactsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView
     var savedMobileTextView: TextView = itemView.findViewById(R.id.saved_contacts_mobile_number)
    fun setData(name: String, mobileNum: String) {
         savedNameTextView.text = name
+       savedMobileTextView.text=mobileNum
     }
 }

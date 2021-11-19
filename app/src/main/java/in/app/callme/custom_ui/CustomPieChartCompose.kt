@@ -1,9 +1,11 @@
 package `in`.app.callme.custom_ui
 
+import `in`.app.callme.localDb.models.UserCallTypeModel
 import android.graphics.Color.RED
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Size
@@ -12,12 +14,13 @@ import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.tooling.preview.PreviewParameter
 
-@Preview
+
 @Composable
-fun CustomPieChartCompose() {
+fun CustomPieChartCompose(userCallTypeModel: UserCallTypeModel) {
     val colors = arrayListOf(Color.Red, Color.Blue, Color.Black, Color.DarkGray, Color.Yellow)
-    val points = arrayListOf(20f, 30f,500f,700f,500f)
+    val points = arrayListOf(20f, 30f, 500f, 700f, 500f)
 
     val totalPoint = points.sum()
     val proportions = points.map {
@@ -43,9 +46,10 @@ fun DrawScope.drawArc(color: Color, startAngle: Float, sweepAngle: Float) {
         startAngle = startAngle,
         sweepAngle = sweepAngle,
         useCenter = false,
-        size = Size(250f,250f),
+        size = Size(250f, 250f),
         style = Stroke(
             width = 50f
         )
     )
 }
+
