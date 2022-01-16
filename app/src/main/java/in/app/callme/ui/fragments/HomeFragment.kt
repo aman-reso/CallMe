@@ -30,7 +30,7 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         System.out.println("homeCreate")
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        return inflater.inflate(R.layout.level_completion_layout, container, false)
     }
 
     override fun onResume() {

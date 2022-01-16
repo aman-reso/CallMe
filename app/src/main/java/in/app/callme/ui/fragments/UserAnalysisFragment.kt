@@ -84,7 +84,6 @@ class UserAnalysisFragment : Fragment() {
     private fun setUpObserver() {
         userAnalysisViewModel.getCallDetails(requireActivity())
         userAnalysisViewModel.userCallCountLLiveData.observe(viewLifecycleOwner) {
-            System.out.println("incoming out-->"+it)
             createChangeablePieChart(it)
         }
     }

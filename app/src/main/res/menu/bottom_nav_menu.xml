@@ -3,17 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/menu_home"
-        android:icon="@drawable/ic_outline_home_24"
+        android:icon="@drawable/ic_icon_home"
         android:title="@string/home"
         app:showAsAction="always" />
     <item
         android:id="@+id/menu_analysis"
-        android:icon="@drawable/ic_outline_trending_up_24"
-        android:title="@string/analysis"
+        android:icon="@drawable/ic_frame"
+        android:title="@string/goals"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/menu_contacts"
-        android:icon="@drawable/ic_outline_person_24"
-        android:title="@string/contacts"
+        android:icon="@drawable/ic_challenge"
+        android:title="@string/challenge"
         app:showAsAction="ifRoom" />
 </menu>

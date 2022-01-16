@@ -4,4 +4,14 @@
     <dimen name="dimen_16dp">16dp</dimen>
     <dimen name="text_size_12sp">12sp</dimen>
     <dimen name="dimen_20sp">20sp</dimen>
+    <dimen name="primary_header_text">20sp</dimen>
+    <dimen name="sec_header_text">18sp</dimen>
+    <dimen name="ter_header_text">16sp</dimen>
+    <dimen name="medium_body_text">14sp</dimen>
+    <dimen name="small_body_text">12sp</dimen>
+    <dimen name="extra_small_body_text">10sp</dimen>
+    <dimen name="nano_text">8sp</dimen>
+    <dimen name="dimen_24dp">24dp</dimen>
+    <dimen name="dimen_28dp">28dp</dimen>
+    <dimen name="dimen_4dp">4dp</dimen>
 </resources>

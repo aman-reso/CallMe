@@ -29,8 +29,7 @@ class UserAnalysisViewModel : ViewModel() {
         var outGoingCallCount = 0
         var missedCallCount = 0
         var blockNumberCount = 0
-        var managedCursor =
-            activity.contentResolver.query(CallLog.Calls.CONTENT_URI, null, null, null, null)
+        var managedCursor = activity.contentResolver.query(CallLog.Calls.CONTENT_URI, null, null, null, null)
         val number = managedCursor?.getColumnIndex(CallLog.Calls.NUMBER)
         val type = managedCursor?.getColumnIndex(CallLog.Calls.TYPE)
         val date = managedCursor?.getColumnIndex(CallLog.Calls.DATE)

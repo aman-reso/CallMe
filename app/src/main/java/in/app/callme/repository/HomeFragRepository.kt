@@ -11,7 +11,7 @@ import javax.inject.Singleton
 
 
 @Singleton
-class HomeFragRepository @Inject constructor(var service: BasicInterface) {
+class HomeFragRepository @Inject constructor(private var service: BasicInterface) {
     suspend fun getResponse(): GlobalNetworkResponse<Response<Any>> {
         return safeApiCall {
             withContext(Dispatchers.IO) {

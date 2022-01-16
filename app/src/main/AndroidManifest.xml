@@ -21,9 +21,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.">
         <activity
-            android:name=".ui.activity.BillingFormActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
+            android:name=".expenseInput.AddTransactionActivity"
             android:exported="true" />
+        <activity
+            android:name=".ui.activity.BillingFormActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
 
         <service
             android:name=".services.TelecomService"
@@ -37,9 +40,9 @@
 
         <activity
             android:name=".MainActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
             android:configChanges="orientation|navigation|keyboardHidden|keyboard"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

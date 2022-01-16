@@ -1,0 +1,3 @@
+val => it is immutable  and runtime like final keyword in java  where as val can be used as local variable but const not
+const val => it is immutable and compile time better to use
+var =>can change it value it is mutable

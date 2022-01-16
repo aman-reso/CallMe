@@ -10,7 +10,7 @@ buildscript {
 
     ext.kotlin_version = '1.5.10'
     ext.hilt_version = '2.38.1'
-    ext.compose_version = '1.0.0-beta09'
+    ext.compose_version = '1.0.0'
     repositories {
         jcenter()
         google()
@@ -18,7 +18,7 @@ buildscript {
 
     dependencies {
         classpath("com.google.dagger:hilt-android-gradle-plugin:2.40")
-        classpath 'com.android.tools.build:gradle:7.0.3'
+        classpath 'com.android.tools.build:gradle:7.0.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 

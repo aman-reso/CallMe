@@ -1,7 +1,23 @@
 <resources>
-    <string name="app_name">CallMe</string>
+    <string name="app_name">Expense</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="analysis">Analysis</string>
     <string name="contacts">Contacts</string>
     <string name="home">Home</string>
+    <string name="goals">Goals</string>
+    <string name="challenge">Challenge</string>
+    <string name="decoration">decoration</string>
+    <string name="goal_successfully_reached">Goal Successfully Reached</string>
+    <string name="todo">todo</string>
+    <string name="congratulation_you_have_achieved_your_goal_nyou_great_people">Congratulation, you have achieved your goal. \nyou great people!</string>
+    <string name="amount">Amount</string>
+    <string name="notes">Notes</string>
+    <string name="date">Date</string>
+    <string name="category">Category</string>
+    <string name="add_a_receipt">Add a receipt</string>
+    <string name="add_your_expense">Add your expense</string>
+    <string name="add_your_transaction">Add your Transaction</string>
+    <string name="add_transaction">ADD TRANSACTION</string>
+    <string name="income">Income</string>
+    <string name="expense">Expense</string>
 </resources>

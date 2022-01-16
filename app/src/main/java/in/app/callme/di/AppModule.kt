@@ -41,5 +41,6 @@ object AppModule {
     fun provideChannelDao(appDatabase: AppDatabase): UserDao {
         return appDatabase.userDao()
     }
+
 }
 

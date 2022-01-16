@@ -1,5 +1,6 @@
 package `in`.app.callme
 
+import `in`.app.callme.applevel.AppActivityManager
 import android.app.Application
 import android.content.ComponentName
 import android.content.Context
@@ -25,6 +26,7 @@ class CallMeApplication : Application() {
         if (INSTANCE == null) {
             INSTANCE = applicationContext as CallMeApplication?
         }
+        AppActivityManager(this)
     }
 
 

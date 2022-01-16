@@ -9,7 +9,6 @@ object AppCustomToast {
         if (BuildConfig.DEBUG) {
             Toast.makeText(CallMeApplication.getApplicationContext(), message, Toast.LENGTH_LONG)
                 .show()
-        } else {
         }
     }
 }

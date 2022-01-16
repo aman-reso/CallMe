@@ -10,18 +10,21 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class HomeFragViewModel @Inject constructor(var repository: HomeFragRepository) : ViewModel() {
+class HomeFragViewModel @Inject  constructor(private var repository: HomeFragRepository) : ViewModel() {
 
     fun get() = viewModelScope.launch {
-        val response = repository.getResponse()
-        when(response)
-        {
-            is GlobalNetworkResponse.Success<*> ->{
-
+        when (repository.getResponse()) {
+            is GlobalNetworkResponse.Success<*> -> {
             }
             else -> {
 
             }
         }
+    }
+}
+
+class Ok private constructor() {
+    fun getValue() {
+
     }
 }

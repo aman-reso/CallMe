@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/all_fields_secondary_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_8dp"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                android:layout_marginBottom="@dimen/dimen_16dp"
+                android:fontFamily="@font/gilory_regular"
+                android:text="@string/add_your_transaction"
+                android:textAlignment="center"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/primary_header_text"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/amount_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="@dimen/dimen_8dp"
+                android:background="@drawable/edit_text_bg"
+                android:fontFamily="@font/gilory_regular"
+                android:hint="@string/amount"
+                android:inputType="number"
+                android:maxLength="8"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/text_size_12sp"
+                tools:ignore="Autofill" />
+
+            <EditText
+                android:id="@+id/date_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="@dimen/dimen_8dp"
+                android:background="@drawable/edit_text_bg"
+                android:fontFamily="@font/gilory_regular"
+                android:hint="@string/date"
+                android:inputType="date"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/text_size_12sp"
+                tools:ignore="Autofill" />
+
+            <EditText
+                android:id="@+id/category_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="@dimen/dimen_8dp"
+                android:background="@drawable/edit_text_bg"
+                android:fontFamily="@font/gilory_regular"
+                android:hint="@string/category"
+                android:inputType="number"
+                android:paddingHorizontal="@dimen/text_size_12sp"
+                tools:ignore="Autofill" />
+
+            <EditText
+                android:id="@+id/add_notes_editText"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="@dimen/dimen_8dp"
+                android:background="@drawable/edit_text_bg"
+                android:fontFamily="@font/gilory_regular"
+                android:hint="@string/notes"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/text_size_12sp"
+                tools:ignore="Autofill" />
+
+            <EditText
+                android:id="@+id/add_receipt_editText"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="@dimen/dimen_8dp"
+                android:background="@drawable/edit_text_bg"
+                android:fontFamily="@font/gilory_regular"
+                android:hint="@string/add_a_receipt"
+                android:inputType="text"
+                android:paddingHorizontal="@dimen/text_size_12sp"
+                tools:ignore="Autofill" />
+
+            <include
+                android:id="@+id/transaction_type_selector_container"
+                layout="@layout/transaction_type_selector_layout" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/submit_add_transaction_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/btn_background"
+                android:elevation="@dimen/dimen_4dp"
+                android:enabled="false"
+                android:fontFamily="@font/gilory_regular"
+                android:paddingHorizontal="@dimen/dimen_28dp"
+                android:text="@string/add_transaction"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sec_header_text"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+        <!--
+        nested scrollview
+        -->
+    </androidx.core.widget.NestedScrollView>
+</layout>
+

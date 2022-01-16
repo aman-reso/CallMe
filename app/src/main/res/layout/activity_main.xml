@@ -12,18 +12,6 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-        <ImageView
-            android:id="@+id/dashBoardHomePage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="8dp"
-            android:src="@drawable/ic_round_dashboard_24"
-            app:layout_constraintBottom_toBottomOf="@+id/textView"
-            app:layout_constraintEnd_toStartOf="@+id/textView"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView" />
-
         <TextView
             android:id="@+id/textView"
             android:layout_width="0dp"
@@ -32,16 +20,17 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="8dp"
-            android:fontFamily="@font/open_sans_bold"
             android:gravity="start"
             android:text="@string/app_name"
             android:textColor="@color/black"
             android:textSize="@dimen/dimen_20sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/homeFragmentContainer"
             app:layout_constraintEnd_toStartOf="@+id/addImageHome"
-            app:layout_constraintStart_toEndOf="@+id/dashBoardHomePage"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <!--reason behind using AppCompatImageView is it supports older version-->
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/addImageHome"
             android:layout_width="wrap_content"
@@ -55,7 +44,9 @@
             app:layout_constraintStart_toEndOf="@+id/textView"
             app:layout_constraintTop_toTopOf="@+id/textView"
             app:srcCompat="@drawable/ic_round_add_24" />
-
+        <!-- uses frame layout mostly when we have one Single View but in case of multiple view
+        we can use layout_gravity
+        -->
         <FrameLayout
             android:id="@+id/homeFragmentContainer"
             android:layout_width="match_parent"
@@ -70,10 +61,12 @@
             android:id="@+id/bottomNavigationView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:theme="@style/_bottomNavigationView"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/homeFragmentContainer"
             app:menu="@menu/bottom_nav_menu" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

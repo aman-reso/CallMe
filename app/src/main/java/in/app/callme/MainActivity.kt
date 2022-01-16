@@ -1,15 +1,15 @@
 package `in`.app.callme
 
 import `in`.app.callme.databinding.ActivityMainBinding
+import `in`.app.callme.expenseInput.AddTransactionActivity
 import `in`.app.callme.ui.fragments.ContactsFragment
 import `in`.app.callme.ui.fragments.HomeFragment
 import `in`.app.callme.ui.fragments.UserAnalysisFragment
-import `in`.app.callme.utils.AppCustomToast
 import `in`.app.callme.utils.GlobalVariable.ANALYSIS
 import `in`.app.callme.utils.GlobalVariable.CONTACTS
 import `in`.app.callme.utils.GlobalVariable.HOME
 import `in`.app.callme.viewmodel.HomeFragViewModel
-import `in`.app.callme.viewmodel.UserContactsViewModel
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
@@ -18,14 +18,12 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener,
-    View.OnClickListener {
+class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
     private var activityBinding: ActivityMainBinding? = null
     private var btmNavView: BottomNavigationView? = null
     private var dashBoardImgView: ImageView? = null
@@ -33,9 +31,9 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
 
     private val exampleViewModel: HomeFragViewModel by viewModels()
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         activityBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         //initialize view components
         activityBinding?.let { mainBinding ->
@@ -49,7 +47,6 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     private fun setUpComponentBindings(activityBinding: ActivityMainBinding) {
         btmNavView = activityBinding.bottomNavigationView
         addIconImageView = activityBinding.addImageHome
-        dashBoardImgView = activityBinding.dashBoardHomePage
     }
 
     private fun setUpListener() {
@@ -67,7 +64,10 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
                 setUpFragment(ANALYSIS)
             }
             R.id.menu_contacts -> {
-                setUpFragment(CONTACTS)
+                //setUpFragment(CONTACTS)
+                val intent = Intent(this, AddTransactionActivity::class.java);
+                startActivity(intent)
+
             }
         }
         return true
@@ -151,9 +151,6 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
 
     override fun onClick(v: View) {
         when (v.id) {
-            R.id.dashBoardHomePage -> {
-
-            }
             R.id.addImageHome -> {
 
             }
